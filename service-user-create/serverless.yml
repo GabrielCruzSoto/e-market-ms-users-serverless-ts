@@ -1,0 +1,18 @@
+service: service-user-get-all
+useDotenv: true
+provider:
+  name: aws
+  runtime: nodejs16.x
+functions:
+  fun-lambda-user-create:
+    handler: src/CreateUserHandler.lambdaHandler
+    description: Create user
+    events:
+      - httpApi: POST /user
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+plugins:
+  - serverless-esbuild
+  - serverless-offline
