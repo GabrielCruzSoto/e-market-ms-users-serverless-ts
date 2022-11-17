@@ -5,7 +5,7 @@ def folderName = ""
 pipeline {
     agent any 
     stages {
-        stage('Get Dependencies') {
+        stage('version node') {
             steps {
                 echo 'Get Dependencies..'
                 sh 'node -v' 
