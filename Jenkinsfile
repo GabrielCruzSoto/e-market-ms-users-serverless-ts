@@ -3,10 +3,7 @@
 def tagName = ""
 def folderName = ""
 pipeline {
-    agent {
-        label "dev-jobs"
-    }
-
+    agent any 
     stages {
         stage('Build') {
             steps {
