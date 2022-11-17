@@ -4,6 +4,7 @@ def tagName = ""
 def folderName = ""
 pipeline {
     agent any 
+    tools { nodejs "node"}
     stages {
         stage('version node') {
             steps {
@@ -19,7 +20,7 @@ pipeline {
         stage('Get Dependencies') {
             steps {
                 echo 'Get Dependencies..'
-                sh 'npm install -D' 
+                sh 'npm install' 
             }
         }
         stage('Build') {
