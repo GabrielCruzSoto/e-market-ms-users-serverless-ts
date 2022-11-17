@@ -7,8 +7,13 @@ pipeline {
     stages {
         stage('version node') {
             steps {
-                echo 'Get Dependencies..'
-                sh 'node -v' 
+                
+                echo 'pwd'
+                sh 'pwd'
+                echo 'PATH'
+                sh 'echo $PATH'
+                echo 'node -version'
+                sh 'node -v'
             }
         }
         stage('Get Dependencies') {
