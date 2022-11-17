@@ -8,13 +8,13 @@ pipeline {
         stage('Get Dependencies') {
             steps {
                 echo 'Get Dependencies..'
-                npm install -D 
+                sh 'npm install -D' 
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-                npm run build
+                sh 'npm run build'
             }
         }
         stage('Test') {
