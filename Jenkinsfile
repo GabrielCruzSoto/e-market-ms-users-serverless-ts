@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Permision') {
             steps {
-                echo 'Testing..'
+                sh('ls -la ..')
             }
         }
         stage('Build') {
