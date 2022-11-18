@@ -1,4 +1,4 @@
-service: service-user-get-all
+service: serv-user
 useDotenv: true
 provider:
   name: aws
@@ -9,6 +9,11 @@ functions:
     description: Create user
     events:
       - httpApi: POST /user
+  fun-lambda-user-get-all:
+    handler: src/GetAllUserHandler.lambdaHandler
+    description: Get ALl users
+    events:
+      - httpApi: GET /user/all
 custom:
   esbuild:
     bundle: true

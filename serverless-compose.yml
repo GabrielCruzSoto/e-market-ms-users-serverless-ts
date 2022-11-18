@@ -1,5 +1,0 @@
-services:
-  service-user-create:
-    path: service-user-create
-  service-user-get-all:
-    path: service-user-get-all
