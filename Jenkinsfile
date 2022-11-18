@@ -6,15 +6,14 @@ pipeline {
     agent any 
     tools { nodejs "node"}
     stages {
-        stage('Permision') {
+        stage('Get Dependencies') {
             steps {
-                sh('ls -la ..')
+                sh('npm install')
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh('npm install')
                 sh('npm run build')
             }
         }
